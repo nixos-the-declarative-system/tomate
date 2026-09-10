@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     }
 
     for (long remaining = minutes * 60; remaining > 0; remaining--) {
-        printf("\r🍅  %02ld:%02ld — working.", remaining / 60, remaining % 60);
+        printf("\r🍅  %02ld:%02ld — working.\033[K", remaining / 60, remaining % 60);
         fflush(stdout);
         sleep(1);
     }
